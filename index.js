@@ -18,19 +18,11 @@ function bumpCounter() {
 }
 
 function createAnimal(animalType) {
-
-  function deadlyDevice(deadlyDevice) {
-    var obj = {}
-
-    obj["animalType"] = animalType;
-    obj["deadlyDevice"] = deadlyDevice;
-
-    return obj;
+  return function (deadlyDevice) {
+    return { animalType, deadlyDevice };
   }
-
-  return deadlyDevice;
 }
 
 var sharkCreator = createAnimal('Shark');
-var sharkWithFrickinLaserbeam = sharkCreator.bind(null, 'Laserbeam');
-var sharkWithFrickinCannon = sharkCreator.bind(null, 'Cannon');
+var sharkWithFrickinLaserbeam = sharkCreator('Laserbeam');
+var sharkWithFrickinCannon = sharkCreator('Cannon');
