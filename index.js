@@ -10,6 +10,11 @@ function bumpCounter() {
   function getBumps() {
     return counter;
   }
+
+  return {
+    addBump(),
+    getBumps()
+  }
 }
 
 function createAnimal(animalType) {
@@ -21,8 +26,7 @@ function createAnimal(animalType) {
     obj["deadlyDevice"] = deadlyDevice;
 
     return obj;
-  }  
+  }
 }
 
 var sharkCreator = createAnimal('Shark');
-sharkCreator;
