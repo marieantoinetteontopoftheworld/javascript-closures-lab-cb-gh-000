@@ -27,6 +27,11 @@ function createAnimal(animalType) {
 
     return obj;
   }
+
+  return deadlyDevice;
 }
 
 var sharkCreator = createAnimal('Shark');
+var sharkWithFrickinLaserbeam = sharkCreator.bind(null, 'Laserbeam');
+var sharkWithFrickinCannon = sharkCreator.bind(null, 'Cannon');
+
