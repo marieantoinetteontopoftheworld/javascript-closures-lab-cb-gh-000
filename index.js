@@ -1,19 +1,17 @@
-const app = "I don't do much."
-
 function bumpCounter() {
-  var counter;
+  let counter = 0;
 
   function addBump() {
-    counter += 1;
+    counter++;
   }
 
   function getBumps() {
     return counter;
   }
-
+  
   return {
-    addBump(),
-    getBumps(),
+    addBump,
+    getBumps,
   };
 }
 
